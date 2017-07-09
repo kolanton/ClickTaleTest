@@ -1,2 +1,2 @@
-# GiveAHand
-ReactJS boilerplate
+# ClickTale Test
+
