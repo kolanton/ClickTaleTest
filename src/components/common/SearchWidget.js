@@ -1,16 +1,15 @@
 //Search field and button
-import React, { Component } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import AutoComplete from 'material-ui/AutoComplete';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { loadKeys } from '../../actions/keyActions';
-import { loadCurrentCard } from '../../actions/currentCardActions';
+import React, { Component } from "react";
+import RaisedButton from "material-ui/RaisedButton";
+import AutoComplete from "material-ui/AutoComplete";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { loadKeys } from "../../actions/keyActions";
+import { loadCurrentCard } from "../../actions/currentCardActions";
 
 const style = {
-  margin: 12,
+  margin: 12
 };
-
 
 class AutoCompleteExampleSimple extends Component {
   constructor(props) {
@@ -40,7 +39,8 @@ class AutoCompleteExampleSimple extends Component {
           floatingLabelText="Worker name"
           filter={AutoComplete.caseInsensitiveFilter}
         />
-        <RaisedButton label="Search"
+        <RaisedButton
+          label="Search"
           primary={true}
           style={style}
           onClick={this.handleSearch}
@@ -56,19 +56,11 @@ AutoCompleteExampleSimple.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-  return {
-    keys: state.keys,
-    cards: state.cards,
-  };
+  return { keys: state.keys, cards: state.cards };
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
-  return {
-
-  };
+  return {};
 }
 
-export default connect(
-  mapStateToProps
-)(AutoCompleteExampleSimple);
-
+export default connect(mapStateToProps)(AutoCompleteExampleSimple);

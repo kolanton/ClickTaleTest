@@ -211,11 +211,11 @@ class WorkerApi {
     for (let index = 0; index < count; index++) {
       res.push({
         id: index,
-        active: pageIndex,
-        key: key
+        active: pageIndex === index,
       });
     }
-    return res;
+    let currentPagingData = {key:key,current:pageIndex, data: res};
+    return currentPagingData;
   }
 }
 
